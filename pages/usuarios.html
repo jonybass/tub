@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8">
+<title>Usuários - TUB</title>
+
+<link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<h2>Usuários</h2>
+
+<a href="../index.html">Voltar</a>
+
+</header>
+
+
+
+<main>
+
+
+<h2>Novo Usuário</h2>
+
+
+<input id="nome" placeholder="Nome">
+
+
+<input id="login" placeholder="Login">
+
+
+<input id="senha" placeholder="Senha">
+
+
+<select id="tipo">
+
+<option value="USUARIO">
+Usuário
+</option>
+
+<option value="DEV">
+DEV
+</option>
+
+</select>
+
+
+<button onclick="salvarUsuario()">
+Salvar
+</button>
+
+
+
+<h2>Lista</h2>
+
+
+<table border="1" width="100%">
+
+<thead>
+
+<tr>
+
+<th>Nome</th>
+<th>Login</th>
+<th>Tipo</th>
+<th>Ação</th>
+
+</tr>
+
+</thead>
+
+
+<tbody id="lista">
+
+</tbody>
+
+
+</table>
+
+
+</main>
+
+
+
+<script src="../js/storage.js"></script>
+<script src="../js/permissao.js"></script>
+
+<script>
+somenteDev();
+</script>
+
+<script src="../js/usuarios.js"></script>
+
+</body>
+</html>

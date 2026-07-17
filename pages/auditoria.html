@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Auditoria - TUB</title>
+
+<link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<h2>Auditoria</h2>
+
+<a href="../index.html">Voltar</a>
+
+</header>
+
+
+
+<main>
+
+
+<h2>Nova Contagem</h2>
+
+
+<input id="rua" placeholder="Rua">
+
+
+<input id="produto" placeholder="Produto">
+
+
+<input id="codigo" placeholder="Código">
+
+
+<input id="barras" placeholder="Código de Barras">
+
+
+<input id="lote" placeholder="Batela/Lote">
+
+
+<select id="tipo">
+
+<option value="Palete">
+Palete
+</option>
+
+<option value="Unidade">
+Unidade
+</option>
+
+<option value="Caixa">
+Caixa
+</option>
+
+<option value="Saco">
+Saco
+</option>
+
+
+</select>
+
+
+<input id="quantidade" type="number" placeholder="Quantidade">
+
+
+
+<button onclick="salvarAuditoria()">
+
+Salvar Contagem
+
+</button>
+
+
+
+<p id="mensagem"></p>
+
+
+</main>
+
+
+
+<script src="../js/storage.js"></script>
+
+<script src="../js/auditoria.js"></script>
+
+
+</body>
+
+</html>

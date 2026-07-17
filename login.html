@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>TUB Login</title>
+<link rel="stylesheet" href="css/login.css">
+<link rel="manifest" href="manifest.json">
+
+<meta name="theme-color" content="#1976D2">
+</head>
+
+<body>
+
+<div class="login">
+
+<h1>TUB</h1>
+
+<input id="login" placeholder="Login">
+
+<input id="senha" type="password" placeholder="Senha">
+
+<button onclick="entrar()">Entrar</button>
+
+<p id="erro"></p>
+
+</div>
+
+
+<script src="js/storage.js"></script>
+<script src="js/auth.js"></script>
+<script>
+
+if("serviceWorker" in navigator){
+
+navigator.serviceWorker.register("service-worker.js");
+
+}
+
+</script>
+</body>
+</html>
