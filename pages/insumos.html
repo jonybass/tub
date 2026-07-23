@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+<title>Insumos - TUB</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<header>
+
+<h2>Insumos</h2>
+
+<a href="../index.html">Voltar</a>
+
+</header>
+
+<nav class="menu-insumos">
+    <button type="button" data-section="estoque" onclick="mostrarSecao('estoque')">Estoque</button>
+    <button type="button" data-section="entrada" onclick="mostrarSecao('entrada')">Entrada</button>
+    <button type="button" data-section="saida" onclick="mostrarSecao('saida')">Saída</button>
+    <button type="button" data-section="cadastro" onclick="mostrarSecao('cadastro')">Cadastro</button>
+</nav>
+
+<main>
+
+<section id="estoqueSection" class="tab-section">
+    <h2>Estoque de Insumos</h2>
+    <table class="table-full">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Quantidade</th>
+                <th>Editar</th>
+            </tr>
+        </thead>
+        <tbody id="insumosLista"></tbody>
+    </table>
+</section>
+
+<section id="cadastroSection" class="tab-section hidden">
+    <h2>Cadastro de Insumo</h2>
+    <div class="form-grid">
+        <input id="cadastroNome" placeholder="Nome do insumo">
+        <select id="cadastroTipo">
+            <option value="">Tipo de contagem</option>
+            <option value="saco">Saco</option>
+            <option value="fardo">Fardo</option>
+            <option value="caixa">Caixa</option>
+            <option value="palete">Palete</option>
+            <option value="unidade">Unidade</option>
+        </select>
+        <div class="form-buttons">
+            <button type="button" onclick="voltarParaEstoque()">Voltar</button>
+            <button type="button" onclick="cadastrarInsumo()">Cadastrar</button>
+            <button type="button" onclick="cancelarCadastro()">Cancelar</button>
+        </div>
+        <p id="cadastroMsg"></p>
+    </div>
+</section>
+
+<section id="entradaSection" class="tab-section hidden">
+    <h2>Registrar Entrada de Insumo</h2>
+    <div class="form-grid">
+        <select id="entradaInsumo"></select>
+        <input id="entradaQuantidade" type="number" min="1" placeholder="Quantidade">
+        <input id="entradaObservacao" placeholder="Observação">
+        <input id="entradaTurno" placeholder="Turno">
+        <input id="entradaData" type="date">
+        <div class="form-buttons">
+            <button type="button" onclick="voltarParaEstoque()">Voltar</button>
+            <button type="button" onclick="registrarEntrada()">Registrar</button>
+        </div>
+        <p id="entradaMsg"></p>
+    </div>
+</section>
+
+<section id="saidaSection" class="tab-section hidden">
+    <h2>Registrar Saída de Insumo</h2>
+    <div class="form-grid">
+        <select id="saidaInsumo"></select>
+        <input id="saidaQuantidade" type="number" min="1" placeholder="Quantidade">
+        <input id="saidaObservacao" placeholder="Observação">
+        <input id="saidaTurno" placeholder="Turno">
+        <input id="saidaData" type="date">
+        <div class="form-buttons">
+            <button type="button" onclick="voltarParaEstoque()">Voltar</button>
+            <button type="button" onclick="registrarSaida()">Registrar</button>
+        </div>
+        <p id="saidaMsg"></p>
+    </div>
+</section>
+
+<section id="movimentosSection" class="tab-section hidden">
+    <h2 id="movimentosTitulo">Movimentações</h2>
+    <table class="table-full">
+        <thead>
+            <tr>
+                <th>Tipo</th>
+                <th>Quantidade</th>
+                <th>Observação</th>
+                <th>Turno</th>
+                <th>Data</th>
+            </tr>
+        </thead>
+        <tbody id="movimentosLista"></tbody>
+    </table>
+    <button type="button" onclick="voltarParaEstoque()">Voltar</button>
+</section>
+
+<section id="editarSection" class="tab-section hidden">
+    <h2>Editar Insumo</h2>
+    <div class="form-grid">
+        <input id="editarNome" placeholder="Nome do insumo">
+        <select id="editarTipo">
+            <option value="">Tipo de contagem</option>
+            <option value="saco">Saco</option>
+            <option value="fardo">Fardo</option>
+            <option value="caixa">Caixa</option>
+            <option value="palete">Palete</option>
+            <option value="unidade">Unidade</option>
+        </select>
+        <div class="form-buttons">
+            <button type="button" onclick="cancelarEdicao()">Cancelar</button>
+            <button type="button" onclick="atualizarInsumo()">Salvar</button>
+        </div>
+        <p id="editarMsg"></p>
+    </div>
+</section>
+
+</main>
+
+<script src="../js/storage.js"></script>
+<script src="../js/insumos.js"></script>
+
+</body>
+
+</html>

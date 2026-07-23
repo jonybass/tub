@@ -22,69 +22,23 @@
 <a href="../index.html">Voltar</a>
 
 </header>
-
-
-
-<main>
-
-
-<h2>Adicionar Estoque</h2>
-
-
-<input id="rua" placeholder="Rua">
-
-
-<input id="produto" placeholder="Produto">
-
-
-<input id="codigo" placeholder="Código">
-
-
-<input id="barras" placeholder="Código de Barras">
-
-
-<input id="lote" placeholder="Lote">
-
-
-<select id="tipo">
-
-<option>Palete</option>
-
-<option>Unidade</option>
-
-<option>Caixa</option>
-
-<option>Saco</option>
-
-</select>
-
-
-<input id="quantidade" type="number" placeholder="Quantidade">
-
-
-<input id="descricao" placeholder="Descrição">
-
-
-
-<button onclick="entrada()">
-
-Salvar Entrada
-
-</button>
-
-
-<p id="msg"></p>
-
-
-</main>
-
-
-
-<script src="../js/storage.js"></script>
-
-<script src="../js/movimentacao.js"></script>
-
-
-</body>
-
-</html>
+<section class="page-card">
+    <h2>Adicionar Estoque</h2>
+    <div class="form-grid">
+        <input id="rua" placeholder="Rua">
+        <input id="produto" placeholder="Produto">
+        <input id="codigo" placeholder="Código">
+        <input id="barras" placeholder="Código de Barras">
+        <input id="lote" placeholder="Lote">
+        <select id="tipo">
+            <option>Palete</option>
+            <option>Unidade</option>
+            <option>Caixa</option>
+            <option>Saco</option>
+        </select>
+        <input id="quantidade" type="number" placeholder="Quantidade">
+        <input id="descricao" placeholder="Descrição">
+        <button onclick="entrada()">Salvar Entrada</button>
+        <p id="msg"></p>
+    </div>
+</section>

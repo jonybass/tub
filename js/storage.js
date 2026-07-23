@@ -43,6 +43,16 @@ function iniciarSistema(){
         DB.set("movimentacoes", []);
     }
 
+
+    if(!localStorage.getItem("insumos")){
+        DB.set("insumos", []);
+    }
+
+
+    if(!localStorage.getItem("insumosMovimentacoes")){
+        DB.set("insumosMovimentacoes", []);
+    }
+
 }
 
 

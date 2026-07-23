@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>TUB Login</title>
-<link rel="stylesheet" href="css/login.css">
+<link rel="stylesheet" href="css/login.css?v=3">
 <link rel="manifest" href="manifest.json">
 
 <meta name="theme-color" content="#1976D2">
@@ -15,19 +15,24 @@
 <img src="assets/icon.png" class="logo">
 <h1>TUB</h1>
 
+<p class="subtitle">Acesse seu painel de gerenciamento</p>
+
 <input id="login" placeholder="Login">
 
 <input id="senha" type="password" placeholder="Senha">
 
-<button onclick="entrar()">Entrar</button>
+<div class="button-row">
+    <button class="secondary" onclick="entrar()">Entrar</button>
+    <button type="button" onclick="window.location.href='pages/usuarios-novo.html'">Criar usuário</button>
+</div>
 
 <p id="erro"></p>
 
 </div>
 
 
-<script src="js/storage.js"></script>
-<script src="js/auth.js"></script>
+<script src="js/storage.js?v=3"></script>
+<script src="js/auth.js?v=3"></script>
 <script>
 
 if("serviceWorker" in navigator){
